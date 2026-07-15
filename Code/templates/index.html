@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Smart Lender</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#1d2671,#c33764);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:30px;
+}
+
+.container{
+    background:white;
+    width:700px;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+h1{
+    text-align:center;
+    color:#1d2671;
+    margin-bottom:10px;
+}
+
+p{
+    text-align:center;
+    color:gray;
+    margin-bottom:25px;
+}
+
+.row{
+    margin-bottom:15px;
+}
+
+label{
+    display:block;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+input,select{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    background:#1d2671;
+    color:white;
+    border:none;
+    border-radius:10px;
+    font-size:18px;
+    cursor:pointer;
+    margin-top:20px;
+}
+
+button:hover{
+    background:#c33764;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🏦 Smart Lender</h1>
+
+<p>Loan Approval Prediction Form</p>
+
+<form action="/predict" method="post">
+
+<div class="row">
+<label>Gender</label>
+<select name="Gender">
+<option value="1">Male</option>
+<option value="0">Female</option>
+</select>
+</div>
+
+<div class="row">
+<label>Married</label>
+<select name="Married">
+<option value="1">Yes</option>
+<option value="0">No</option>
+</select>
+</div>
+
+<div class="row">
+<label>Dependents</label>
+<select name="Dependents">
+<option value="0">0</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3+</option>
+</select>
+</div>
+
+<div class="row">
+<label>Education</label>
+<select name="Education">
+<option value="0">Graduate</option>
+<option value="1">Not Graduate</option>
+</select>
+</div>
+
+<div class="row">
+<label>Self Employed</label>
+<select name="Self_Employed">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</select>
+</div>
+
+<div class="row">
+<label>Applicant Income</label>
+<input type="number" name="ApplicantIncome" required>
+</div>
+
+<div class="row">
+<label>Coapplicant Income</label>
+<input type="number" name="CoapplicantIncome" required>
+</div>
+
+<div class="row">
+<label>Loan Amount</label>
+<input type="number" name="LoanAmount" required>
+</div>
+
+<div class="row">
+<label>Loan Amount Term</label>
+<input type="number" name="Loan_Amount_Term" required>
+</div>
+
+<div class="row">
+<label>Credit History</label>
+<select name="Credit_History">
+<option value="1">Good</option>
+<option value="0">Bad</option>
+</select>
+</div>
+
+<div class="row">
+<label>Property Area</label>
+<select name="Property_Area">
+<option value="0">Rural</option>
+<option value="1">Semi Urban</option>
+<option value="2">Urban</option>
+</select>
+</div>
+
+<button type="submit">
+Predict Loan Approval
+</button>
+
+</form>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Prediction Result</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#1d2671,#c33764);
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container{
+    background:white;
+    width:500px;
+    padding:50px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+h1{
+    color:#1d2671;
+    margin-bottom:30px;
+}
+
+.result{
+    font-size:32px;
+    font-weight:bold;
+    margin-bottom:30px;
+}
+
+a{
+    text-decoration:none;
+    background:#1d2671;
+    color:white;
+    padding:15px 25px;
+    border-radius:10px;
+}
+
+a:hover{
+    background:#c33764;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🏦 Smart Lender Result</h1>
+
+<div class="result">
+{{ prediction }}
+</div>
+
+<a href="/home">
+Predict Another Loan
+</a>
+
+</div>
+
+</body>
+</html>
